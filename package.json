@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "module": "index.ts",
   "type": "module",
+  "license": "MIT",
   "private": false,
   "bin": {
     "create-audora-next": "./index.ts"
   },
-  "files": ["index.ts", "templates"],
+  "files": [
+    "index.ts",
+    "templates"
+  ],
   "devDependencies": {
     "@types/bun": "latest"
   },
