@@ -40,7 +40,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <CopyableCode code="bunx degit audoralabs/next-starter my-app" />
+        <CopyableCode code="bun create audora-next my-app" />
       </main>
 
       <footer className="absolute right-0 bottom-6 left-0 flex justify-center gap-4">
