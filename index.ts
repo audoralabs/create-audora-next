@@ -76,5 +76,6 @@ ${pc.green("Success!")} Created ${pc.bold(projectName)} at ${pc.cyan(targetDir)}
 
 ${pc.bold("Next steps:")}
   ${pc.cyan("cd")} ${projectName}
+  ${pc.cyan("cp .env.example .env")}
   ${pc.cyan("bun dev")}
 `);

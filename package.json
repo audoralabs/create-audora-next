@@ -1,7 +1,16 @@
 {
   "name": "create-audora-next",
   "version": "0.1.0",
-  "module": "index.ts",
+  "description": "Create a new Audora Next.js app with one command",
+  "keywords": [
+    "create",
+    "next",
+    "nextjs",
+    "bun",
+    "starter",
+    "template",
+    "audora"
+  ],
   "type": "module",
   "license": "MIT",
   "private": false,
@@ -15,8 +24,9 @@
   "devDependencies": {
     "@types/bun": "latest"
   },
-  "peerDependencies": {
-    "typescript": "^5"
+  "engines": {
+    "node": ">=18",
+    "bun": ">=1.0.0"
   },
   "dependencies": {
     "ora": "^9.0.0",

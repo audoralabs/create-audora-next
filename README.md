@@ -7,6 +7,7 @@ Create a new Audora Next.js app with one command.
 ```bash
 bunx create-audora-next my-app
 cd my-app
+cp .env.example .env
 bun dev
 ```
 
