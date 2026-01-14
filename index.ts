@@ -48,16 +48,25 @@ cpSync(new URL("./templates/base", import.meta.url), targetDir, {
 });
 
 // Rename template files that npm excludes during publish
+const templateSpinner = ora("Setting up configuration files...").start();
 const templateFiles = [
   { from: "gitignore.template", to: ".gitignore" },
   { from: "env.example.template", to: ".env.example" },
 ];
 
+let renamedCount = 0;
 for (const { from, to } of templateFiles) {
   const filePath = join(targetDir, from);
   if (existsSync(filePath)) {
     renameSync(filePath, join(targetDir, to));
+    renamedCount++;
   }
+}
+
+if (renamedCount > 0) {
+  templateSpinner.succeed("Configuration files ready");
+} else {
+  templateSpinner.warn("No template files found to rename");
 }
 
 process.chdir(targetDir);
