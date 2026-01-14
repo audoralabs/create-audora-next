@@ -52,6 +52,7 @@ const templateSpinner = ora("Setting up configuration files...").start();
 const templateFiles = [
   { from: "gitignore.template", to: ".gitignore" },
   { from: "env.example.template", to: ".env.example" },
+  { from: "husky.template", to: ".husky" },
 ];
 
 let renamedCount = 0;
