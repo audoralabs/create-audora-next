@@ -76,6 +76,9 @@ process.chdir(targetDir);
 const gitSpinner = ora("Initializing git repository...").start();
 try {
   execSync("git init", { stdio: "pipe" });
+  execSync('git commit --allow-empty -m "chore: initial commit"', {
+    stdio: "pipe",
+  });
   gitSpinner.succeed("Initialized git repository");
 } catch {
   gitSpinner.warn("Could not initialize git repository. Is git installed?");
