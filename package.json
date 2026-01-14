@@ -1,6 +1,6 @@
 {
   "name": "create-audora-next",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Create a new Audora Next.js app with one command",
   "keywords": [
     "create",
