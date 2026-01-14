@@ -18,13 +18,32 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) to see your app.
 
-## Features
+## Available Templates
 
-- **Next.js 15** with App Router
-- **TypeScript** for type safety
-- **Tailwind CSS** for styling
-- **ESLint** pre-configured
-- **Git** initialized automatically
+| Template | Status      |
+| -------- | ----------- |
+| `base`   | Available   |
+| `blog`   | Coming Soon |
+
+## Base Template Features
+
+- Next.js 16 with App Router & Turbopack
+- React 19 with React Compiler
+- TypeScript 5 (strict mode)
+- Tailwind CSS 4
+- Bun runtime
+- Open Graph & Twitter Cards
+- Structured Data (JSON-LD)
+- Dynamic robots.txt & sitemap.xml
+- llms.txt for AI assistants
+- PWA Manifest
+- Security headers
+- Dark mode with next-themes
+- Geist font
+- ESLint 9 flat config
+- Prettier with Tailwind plugin
+- Husky & lint-staged
+- Path alias (`@/*`)
 
 ## Requirements
 
