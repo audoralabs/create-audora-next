@@ -49,8 +49,8 @@ cpSync(new URL("./templates/base", import.meta.url), targetDir, {
 
 // Rename template files that npm excludes during publish
 const templateFiles = [
-  { from: ".gitignore.template", to: ".gitignore" },
-  { from: ".env.example.template", to: ".env.example" },
+  { from: "gitignore.template", to: ".gitignore" },
+  { from: "env.example.template", to: ".env.example" },
 ];
 
 for (const { from, to } of templateFiles) {
