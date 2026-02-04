@@ -6,7 +6,9 @@ import { execSync } from "child_process";
 import pc from "picocolors";
 import ora from "ora";
 
-const projectName = process.argv[2];
+const args = process.argv.slice(2);
+const useBlogTemplate = args.includes("-blog") || args.includes("--blog");
+const projectName = args.find((arg) => arg !== "-blog" && arg !== "--blog");
 
 // Validate project name
 if (!projectName) {
@@ -14,7 +16,7 @@ if (!projectName) {
   console.log(
     `\nUsage: ${pc.cyan("bunx create-audora-next")} ${pc.green(
       "<project-name>"
-    )}\n`
+    )} ${pc.dim("[--blog]")}\n`
   );
   process.exit(1);
 }
@@ -37,13 +39,16 @@ if (existsSync(targetDir)) {
   process.exit(1);
 }
 
+const templateDir = useBlogTemplate ? "blog" : "base";
 console.log(
-  `\nCreating a new ${pc.bold("Audora Next")} app in ${pc.cyan(targetDir)}...\n`
+  `\nCreating a new ${pc.bold("Audora Next")} app${
+    useBlogTemplate ? ` ${pc.dim("(blog template)")}` : ""
+  } in ${pc.cyan(targetDir)}...\n`
 );
 
 // Copy template
 mkdirSync(targetDir);
-cpSync(new URL("./templates/base", import.meta.url), targetDir, {
+cpSync(new URL(`./templates/${templateDir}`, import.meta.url), targetDir, {
   recursive: true,
 });
 
