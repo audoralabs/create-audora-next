@@ -2,13 +2,23 @@
 
 Create a new Audora Next.js app with one command.
 
+## Preview
+
+**Base template**
+
+![Audora Next](./assets/audora-next.webp)
+
+**Blog template**
+
+![Audora Blog](./assets/audora-blog.png)
+
 ## Quick Start
 
 ```bash
 bunx create-audora-next my-app
 ```
 
-Then follow the prompts, or use:
+Use `--blog` to create the blog template. Then follow the prompts, or use:
 
 ```bash
 cd my-app
@@ -20,10 +30,10 @@ Open [http://localhost:3000](http://localhost:3000) to see your app.
 
 ## Available Templates
 
-| Template | Status      |
-| -------- | ----------- |
-| `base`   | Available   |
-| `blog`   | Coming Soon |
+| Template | Status    | Usage                                   |
+| -------- | --------- | --------------------------------------- |
+| `base`   | Available | `bunx create-audora-next my-app`        |
+| `blog`   | Available | `bunx create-audora-next my-app --blog` |
 
 ## Base Template Features
 
@@ -44,6 +54,16 @@ Open [http://localhost:3000](http://localhost:3000) to see your app.
 - Prettier with Tailwind plugin
 - Husky & lint-staged
 - Path alias (`@/*`)
+
+## Blog Template
+
+The blog template includes everything in the base template, plus:
+
+- MDX-based blog posts with frontmatter
+- Blog index at `/blogs` and post pages at `/blogs/[slug]`
+- Content in `src/blogs/content` (MDX files)
+- Blog components (post cards, table of contents, etc.)
+- Ready for adding pagination and search
 
 ## Requirements
 

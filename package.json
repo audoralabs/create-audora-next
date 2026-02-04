@@ -1,6 +1,6 @@
 {
   "name": "create-audora-next",
-  "version": "0.1.7",
+  "version": "2.0.0",
   "description": "Create a new Audora Next.js app with one command",
   "keywords": [
     "create",
@@ -14,12 +14,18 @@
   "type": "module",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "test:local": "bash scripts/test-local.sh",
+    "clean": "rm -rf node_modules .next .turbo",
+    "publish:local": "bun run index.ts --blog"
+  },
   "bin": {
     "create-audora-next": "./index.ts"
   },
   "files": [
     "index.ts",
-    "templates"
+    "templates",
+    "assets"
   ],
   "devDependencies": {
     "@types/bun": "latest"
