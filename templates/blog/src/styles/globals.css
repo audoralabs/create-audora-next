@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* Custom dark variant for Tailwind CSS v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Root color variables using oklch for a muted, premium look */
+:root {
+  /* Muted Slate/Zinc Tone */
+  --background: oklch(0.985 0.002 260); /* Very softened white */
+  --foreground: oklch(0.21 0.015 260); /* Muted slate black */
+  
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.21 0.015 260);
+  
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.21 0.015 260);
+  
+  --primary: oklch(0.21 0.02 260); /* Deep slate primary */
+  --primary-foreground: oklch(0.985 0 0);
+  
+  --secondary: oklch(0.96 0.005 260);
+  --secondary-foreground: oklch(0.21 0.015 260);
+  
+  --muted: oklch(0.96 0.005 260);
+  --muted-foreground: oklch(0.55 0.015 260); /* Softer muted text */
+  
+  --accent: oklch(0.96 0.005 260);
+  --accent-foreground: oklch(0.21 0.015 260);
+  
+  --destructive: oklch(0.65 0.2 23);
+  --destructive-foreground: oklch(0.985 0 0);
+  
+  --border: oklch(0.92 0.005 260);
+  --input: oklch(0.92 0.005 260);
+  --ring: oklch(0.21 0.015 260);
+  
+  --radius: 0.625rem;
+  
+  /** Content max width – change here to update hero, header, and blog layout */
+  --content-max-width: 64rem; /* 1024px = 5xl */
+}
+
+.dark {
+  --background: #0b0d0e; /* Deep dark bg */
+  --foreground: oklch(0.92 0.005 260); /* Softened white */
+  
+  --card: oklch(0.12 0.01 260);
+  --card-foreground: oklch(0.92 0.005 260);
+  
+  --popover: oklch(0.12 0.01 260);
+  --popover-foreground: oklch(0.92 0.005 260);
+  
+  --primary: oklch(0.92 0.005 260);
+  --primary-foreground: oklch(0.12 0.01 260);
+  
+  --secondary: oklch(0.2 0.01 260);
+  --secondary-foreground: oklch(0.92 0.005 260);
+  
+  --muted: oklch(0.2 0.01 260);
+  --muted-foreground: oklch(0.65 0.01 260);
+  
+  --accent: oklch(0.2 0.01 260);
+  --accent-foreground: oklch(0.92 0.005 260);
+  
+  --destructive: oklch(0.5 0.2 23);
+  --destructive-foreground: oklch(0.92 0.005 260);
+  
+  --border: oklch(0.22 0.01 260);
+  --input: oklch(0.22 0.01 260);
+  --ring: oklch(0.8 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-radius: var(--radius);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
