@@ -10,7 +10,7 @@ tags:
   - web
 ---
 
-**Axum** is a fast, ergonomic web framework for Rust built on [Tokio](https://tokio.rs/) (async runtime) and [Tower](https://github.com/tower-rs/tower) (middleware). In this post we’ll build a minimal “Hello, World!” server you can run in a few minutes.
+**Axum** is a fast, ergonomic web framework for Rust built on [Tokio](https://tokio.rs/) (async runtime) and [Tower](https://github.com/tower-rs/tower) (middleware). In this post we'll build a minimal "Hello, World!" server you can run in a few minutes.
 
 ## Setup
 
@@ -57,7 +57,9 @@ cargo run
 
 Open [http://localhost:3000](http://localhost:3000) and you should see **Hello, World!**.
 
-## What’s going on
+![Hello World server running in the browser](/images/screenshot-desktop-light.webp)
+
+## What's going on
 
 - **Router** – Defines routes; here we attach a single `GET /` to `handler`.
 - **handler** – An async function that returns a string; Axum sends it as `text/plain` with status 200.

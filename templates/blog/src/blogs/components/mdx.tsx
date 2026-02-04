@@ -84,9 +84,42 @@ function CustomLink(props: CustomLinkProps) {
   );
 }
 
-function RoundedImage(props: React.ComponentProps<typeof Image>) {
-  // eslint-disable-next-line jsx-a11y/alt-text
-  return <Image className="rounded-lg" {...props} />;
+type ImgProps = React.ComponentProps<typeof Image> & {
+  width?: number | string;
+  height?: number | string;
+};
+
+function BlogImage(props: ImgProps) {
+  const { width, height, alt, src, ...rest } = props;
+  const hasDimensions =
+    typeof width === "number" &&
+    typeof height === "number" &&
+    width > 0 &&
+    height > 0;
+
+  if (hasDimensions) {
+    return (
+      <Image
+        className="rounded-lg"
+        width={width}
+        height={height}
+        alt={alt ?? ""}
+        src={src}
+        {...rest}
+      />
+    );
+  }
+
+  const imgSrc = typeof src === "string" ? src : "";
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      className="rounded-lg max-w-full h-auto"
+      src={imgSrc}
+      alt={alt ?? ""}
+      {...rest}
+    />
+  );
 }
 
 type MDXComponents = NonNullable<MDXRemoteProps["components"]>;
@@ -188,7 +221,7 @@ const components: MDXComponents = {
     );
   },
   a: CustomLink,
-  img: RoundedImage,
+  img: BlogImage,
   Table,
 };
 
