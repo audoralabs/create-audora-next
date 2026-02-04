@@ -6,11 +6,11 @@ Create a new Audora Next.js app with one command.
 
 **Base template**
 
-![Audora Next](./assets/audora-next.webp)
+![Audora Next](https://github.com/AudoraLabs/create-audora-next/raw/master/assets/audora-next.webp)
 
 **Blog template**
 
-![Audora Blog](./assets/audora-blog.png)
+![Audora Blog](https://github.com/AudoraLabs/create-audora-next/raw/master/assets/audora-blog.png)
 
 ## Quick Start
 
