@@ -20,7 +20,7 @@ Open [http://localhost:3000](http://localhost:3000) to see your app.
 
 | Technology   | Version | Notes                          |
 | ------------ | ------- | ------------------------------ |
-| Next.js      | 16.1.1  | App Router, Turbopack enabled  |
+| Next.js      | 16.2.6  | App Router, Turbopack enabled  |
 | React        | 19.2.3  | React Compiler enabled         |
 | TypeScript   | 5       | Strict mode                    |
 | Tailwind CSS | 4       | PostCSS, no config file needed |
